@@ -41,7 +41,7 @@ export default function Navbar() {
   useEffect(() => {
 
     const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
+      setScrolled(window.scrollY > 40);
     };
 
     window.addEventListener(
@@ -63,13 +63,13 @@ export default function Navbar() {
       <div
         className="
           fixed
-          top-0
           left-1/2
+          top-0
           z-50
           w-full
           -translate-x-1/2
           px-4
-          pt-5
+          pt-4
         "
       >
 
@@ -86,12 +86,16 @@ export default function Navbar() {
                   rounded-full
                   border
                   border-white/10
-                  bg-black/40
-                  backdrop-blur-xl
+                  bg-black/50
                   shadow-2xl
+                  shadow-black/40
+                  backdrop-blur-2xl
                 `
                 : `
+                  border border-transparent
                   bg-transparent
+                  backdrop-blur-0
+                  shadow-none
                 `
             }
           `}
@@ -102,9 +106,9 @@ export default function Navbar() {
               flex
               items-center
               justify-between
-              px-6
-              py-5
-              lg:px-8
+              px-5
+              py-3
+              lg:px-7
             "
           >
 
@@ -118,32 +122,34 @@ export default function Navbar() {
               "
             >
 
-              {/* Icon */}
+              {/* Logo Icon */}
               <div
                 className="
                   flex
-                  h-12
-                  w-12
+                  h-11
+                  w-11
                   items-center
                   justify-center
                   rounded-full
-                  bg-primary
-                  text-lg
+                  bg-gradient-to-r
+                  from-pink-500
+                  to-pink-400
+                  text-base
                   font-black
                   text-white
                   shadow-lg
-                  shadow-primary/40
+                  shadow-pink-500/30
                 "
               >
                 E
               </div>
 
-              {/* Text */}
+              {/* Logo Text */}
               <div className="leading-none">
 
                 <h1
                   className="
-                    text-2xl
+                    text-[28px]
                     font-black
                     uppercase
                     tracking-tight
@@ -156,7 +162,7 @@ export default function Navbar() {
                 <p
                   className="
                     mt-1
-                    text-[10px]
+                    text-[9px]
                     uppercase
                     tracking-[0.35em]
                     text-gray-400
@@ -169,20 +175,33 @@ export default function Navbar() {
 
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Nav */}
             <nav
-              className="
+              className={`
                 hidden
                 items-center
-                gap-2
+                gap-1.5
                 rounded-full
-                border
-                border-white/10
-                bg-white/[0.03]
-                p-2
-                backdrop-blur-xl
+                transition-all
+                duration-500
                 lg:flex
-              "
+
+                ${
+                  scrolled
+                    ? `
+                      border
+                      border-white/10
+                      bg-white/[0.03]
+                      p-1.5
+                      backdrop-blur-xl
+                    `
+                    : `
+                      border border-transparent
+                      bg-transparent
+                      p-0
+                    `
+                }
+              `}
             >
 
               {links.map((link) => {
@@ -196,27 +215,30 @@ export default function Navbar() {
                     href={link.href}
                     className={`
                       rounded-full
-                      px-5
-                      py-3
-                      text-sm
-                      font-semibold
+                      px-6
+                      py-2.5
+                      text-xs
+                      font-bold
                       uppercase
-                      tracking-[0.2em]
+                      tracking-[0.25em]
                       transition-all
                       duration-300
 
                       ${
                         active
-                          ? `
-                            bg-white
-                            text-black
-                            shadow-lg
-                          `
+                          ? scrolled
+                            ? `
+                              bg-white
+                              text-black
+                              shadow-lg
+                            `
+                            : `
+                              text-pink-400
+                            `
                           : `
-                            text-gray-300
-                            hover:bg-white/10
-                            hover:text-white
-                          `
+                              text-gray-300
+                              hover:text-white
+                            `
                       }
                     `}
                   >
@@ -235,8 +257,8 @@ export default function Navbar() {
               }
               className="
                 flex
-                h-12
-                w-12
+                h-11
+                w-11
                 items-center
                 justify-center
                 rounded-full
@@ -261,7 +283,7 @@ export default function Navbar() {
 
                     ${
                       mobileMenu
-                        ? "translate-y-[8px] rotate-45"
+                        ? "translate-y-[7px] rotate-45"
                         : ""
                     }
                   `}
@@ -293,7 +315,7 @@ export default function Navbar() {
 
                     ${
                       mobileMenu
-                        ? "-translate-y-[8px] -rotate-45"
+                        ? "-translate-y-[7px] -rotate-45"
                         : ""
                     }
                   `}
@@ -353,7 +375,7 @@ export default function Navbar() {
           "
         />
 
-        {/* Links */}
+        {/* Mobile Links */}
         <nav
           className="
             relative
