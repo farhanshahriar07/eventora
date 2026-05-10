@@ -104,7 +104,7 @@ export default function AboutPage() {
                   text-pink-400
                 "
               >
-                About Eventora
+                About EELEVEN
               </p>
 
               {/* Title */}
@@ -149,7 +149,7 @@ export default function AboutPage() {
                   text-gray-400
                 "
               >
-                Eventora is a next-generation cultural platform focused on immersive entertainment, unforgettable concerts, nightlife, and premium experiences for modern audiences.
+                EELEVEN is a next-generation cultural platform focused on immersive entertainment, unforgettable concerts, nightlife, and premium experiences for modern audiences.
               </p>
 
             </div>
@@ -269,7 +269,7 @@ export default function AboutPage() {
                     text-gray-400
                   "
                 >
-                  From immersive nightlife to large-scale concerts and cultural festivals, Eventora is designed to redefine how modern audiences experience live entertainment.
+                  From immersive nightlife to large-scale concerts and cultural festivals, EELEVEN is designed to redefine how modern audiences experience live entertainment.
                 </p>
 
               </div>

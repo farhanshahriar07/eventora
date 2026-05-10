@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   {
@@ -98,64 +99,21 @@ export default function Footer() {
               group
               inline-flex
               items-center
-              gap-4
+              justify-center
             "
           >
 
-            {/* Icon */}
-            <div
+            <Image
+              src="/logo_footer.png"
+              alt="EELEVEN"
+              width={420}
+              height={180}
               className="
-                flex
-                h-16
-                w-16
-                items-center
-                justify-center
-                rounded-full
-                bg-gradient-to-r
-                from-pink-500
-                to-pink-400
-                text-2xl
-                font-black
-                text-white
-                shadow-2xl
-                shadow-pink-500/30
-                transition-all
-                duration-300
-                group-hover:scale-105
-                group-hover:shadow-pink-500/50
+                h-auto
+                w-[260px]
+                md:w-[380px]
               "
-            >
-              E
-            </div>
-
-            {/* Text */}
-            <div className="text-left">
-
-              <h2
-                className="
-                  text-5xl
-                  font-black
-                  uppercase
-                  tracking-tight
-                  text-white
-                "
-              >
-                Eventora
-              </h2>
-
-              <p
-                className="
-                  mt-1
-                  text-xs
-                  uppercase
-                  tracking-[0.35em]
-                  text-gray-500
-                "
-              >
-                Premium Experiences
-              </p>
-
-            </div>
+            />
 
           </Link>
 
@@ -327,7 +285,7 @@ export default function Footer() {
                 text-gray-500
               "
             >
-              © 2026 Eventora. All rights reserved.
+              © 2026 EELEVEN. All rights reserved.
             </p>
 
             <p

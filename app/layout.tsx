@@ -5,9 +5,13 @@ import "./globals.css";
 import AppLoader from "@/components/providers/AppLoader";
 
 export const metadata: Metadata = {
-  title: "Eventora",
+  title: "EELEVEN",
   description:
-    "Premium cinematic event platform",
+    "Premium immersive event experiences platform",
+
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

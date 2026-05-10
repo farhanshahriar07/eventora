@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import {
   AnimatePresence,
   motion,
@@ -58,9 +60,23 @@ export default function Loader({
               h-[300px]
               w-[300px]
               rounded-full
-              bg-indigo-500/20
+              bg-red-500/10
               blur-3xl
             "
+          />
+
+          {/* Noise Texture */}
+          <div
+            className="
+              absolute
+              inset-0
+              opacity-[0.03]
+              mix-blend-screen
+            "
+            style={{
+              backgroundImage:
+                "url('https://grainy-gradients.vercel.app/noise.svg')",
+            }}
           />
 
           {/* Content */}
@@ -74,70 +90,110 @@ export default function Loader({
             "
           >
 
-            {/* Spinner */}
+            {/* Animated Logo */}
             <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.9,
+                y: 20,
+              }}
               animate={{
-                rotate: 360,
+                opacity: 1,
+                scale: 1,
+                y: 0,
               }}
               transition={{
-                repeat: Infinity,
-                duration: 2,
-                ease: "linear",
+                duration: 0.8,
+                ease: "easeOut",
               }}
               className="
-                flex
-                h-24
-                w-24
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-white/10
-                border-t-pink-500
-                bg-white/[0.03]
-                backdrop-blur-xl
+                relative
               "
             >
 
+              {/* Logo Glow */}
               <div
                 className="
-                  h-10
-                  w-10
+                  absolute
+                  left-1/2
+                  top-1/2
+                  h-[200px]
+                  w-[200px]
+                  -translate-x-1/2
+                  -translate-y-1/2
                   rounded-full
-                  bg-gradient-to-r
-                  from-pink-500
-                  to-pink-300
+                  bg-pink-500/20
+                  blur-3xl
+                "
+              />
+
+              {/* Logo */}
+              <Image
+                src="/logo_footer.png"
+                alt="EELEVEN"
+                width={320}
+                height={140}
+                priority
+                className="
+                  relative
+                  z-10
+                  h-auto
+                  w-[220px]
+                  md:w-[320px]
                 "
               />
 
             </motion.div>
 
-            {/* Brand */}
-            <motion.h1
+            {/* Loading Line */}
+            <motion.div
               initial={{
+                width: 0,
                 opacity: 0,
-                y: 20,
               }}
               animate={{
+                width: 160,
                 opacity: 1,
-                y: 0,
               }}
               transition={{
-                delay: 0.3,
-                duration: 0.8,
+                delay: 0.5,
+                duration: 1,
+                ease: "easeOut",
               }}
               className="
                 mt-10
-                text-5xl
-                font-black
-                uppercase
-                tracking-tight
-                text-white
+                h-[2px]
+                overflow-hidden
+                rounded-full
+                bg-white/10
               "
             >
-              Eventora
-            </motion.h1>
 
+              <motion.div
+                animate={{
+                  x: [
+                    "-100%",
+                    "100%",
+                  ],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.5,
+                  ease: "linear",
+                }}
+                className="
+                  h-full
+                  w-1/2
+                  bg-gradient-to-r
+                  from-transparent
+                  via-pink-500
+                  to-transparent
+                "
+              />
+
+            </motion.div>
+
+            {/* Loading Text */}
             <motion.p
               initial={{
                 opacity: 0,
@@ -146,17 +202,17 @@ export default function Loader({
                 opacity: 1,
               }}
               transition={{
-                delay: 0.6,
+                delay: 0.8,
               }}
               className="
-                mt-3
-                text-sm
+                mt-6
+                text-xs
                 uppercase
-                tracking-[0.35em]
-                text-gray-400
+                tracking-[0.4em]
+                text-gray-500
               "
             >
-              Premium Experiences
+              Immersive Premium Experiences
             </motion.p>
 
           </div>

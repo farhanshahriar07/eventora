@@ -104,7 +104,7 @@ export default function ContactPage() {
                   text-pink-400
                 "
               >
-                Contact Eventora
+                Contact EELEVEN
               </p>
 
               {/* Title */}
@@ -261,7 +261,7 @@ export default function ContactPage() {
                         text-white
                       "
                     >
-                      hello@eventora.com
+                      hello@eeleven.com
                     </p>
 
                   </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import {
   useEffect,
@@ -78,11 +79,14 @@ export default function Navbar() {
             mx-auto
             max-w-7xl
             transition-all
-            duration-500
+            duration-700
+            ease-[cubic-bezier(0.16,1,0.3,1)]
 
             ${
               scrolled
                 ? `
+                  h-[72px]
+                  translate-y-0
                   rounded-full
                   border
                   border-white/10
@@ -96,6 +100,7 @@ export default function Navbar() {
                   bg-transparent
                   backdrop-blur-0
                   shadow-none
+                  translate-y-2
                 `
             }
           `}
@@ -104,11 +109,12 @@ export default function Navbar() {
           <div
             className="
               flex
+              h-full
               items-center
               justify-between
               px-5
-              py-3
-              lg:px-7
+              py-0
+              lg:px-6
             "
           >
 
@@ -118,72 +124,36 @@ export default function Navbar() {
               className="
                 flex
                 items-center
-                gap-3
+                shrink-0
               "
             >
 
-              {/* Logo Icon */}
-              <div
+              <Image
+                src="/logo_header.png"
+                alt="EELEVEN"
+                width={240}
+                height={70}
+                priority
                 className="
-                  flex
-                  h-11
-                  w-11
-                  items-center
-                  justify-center
-                  rounded-full
-                  bg-gradient-to-r
-                  from-pink-500
-                  to-pink-400
-                  text-base
-                  font-black
-                  text-white
-                  shadow-lg
-                  shadow-pink-500/30
+                  h-auto
+                  w-[190px]
+                  object-contain
+                  md:w-[230px]
                 "
-              >
-                E
-              </div>
-
-              {/* Logo Text */}
-              <div className="leading-none">
-
-                <h1
-                  className="
-                    text-[28px]
-                    font-black
-                    uppercase
-                    tracking-tight
-                    text-white
-                  "
-                >
-                  Eventora
-                </h1>
-
-                <p
-                  className="
-                    mt-1
-                    text-[9px]
-                    uppercase
-                    tracking-[0.35em]
-                    text-gray-400
-                  "
-                >
-                  Premium Experiences
-                </p>
-
-              </div>
+              />
 
             </Link>
 
-            {/* Desktop Nav */}
+            {/* Desktop Navigation */}
             <nav
               className={`
                 hidden
                 items-center
-                gap-1.5
+                gap-1
                 rounded-full
                 transition-all
-                duration-500
+                duration-700
+                ease-[cubic-bezier(0.16,1,0.3,1)]
                 lg:flex
 
                 ${
@@ -192,7 +162,8 @@ export default function Navbar() {
                       border
                       border-white/10
                       bg-white/[0.03]
-                      p-1.5
+                      py-[3px]
+                      px-[4px]
                       backdrop-blur-xl
                     `
                     : `
@@ -215,12 +186,13 @@ export default function Navbar() {
                     href={link.href}
                     className={`
                       rounded-full
-                      px-6
-                      py-2.5
+                      px-8
+                      py-3
                       text-xs
                       font-bold
                       uppercase
-                      tracking-[0.25em]
+                      leading-none
+                      tracking-[0.28em]
                       transition-all
                       duration-300
 
@@ -250,15 +222,15 @@ export default function Navbar() {
 
             </nav>
 
-            {/* Mobile Button */}
+            {/* Mobile Menu Button */}
             <button
               onClick={() =>
                 setMobileMenu(!mobileMenu)
               }
               className="
                 flex
-                h-11
-                w-11
+                h-9
+                w-9
                 items-center
                 justify-center
                 rounded-full
