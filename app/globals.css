@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 /* =========================
+   ROOT
+========================= */
+
+:root {
+  --background: #020617;
+  --foreground: #ffffff;
+}
+
+/* =========================
    BASE
 ========================= */
 
@@ -11,15 +20,36 @@ html {
 }
 
 body {
-  background: black;
-  color: white;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(177, 18, 38, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(225, 29, 72, 0.14),
+      transparent 35%
+    ),
+    #020617;
+
+  color: var(--foreground);
 
   overflow-x: hidden;
 
   text-rendering: optimizeLegibility;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  -moz-osx-font-smoothing:
+    grayscale;
 }
 
 /* =========================
@@ -40,7 +70,9 @@ body {
 ========================= */
 
 ::selection {
-  background: rgba(236, 72, 153, 0.3);
+  background:
+    rgba(225, 29, 72, 0.35);
+
   color: white;
 }
 
@@ -53,31 +85,44 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 999px;
 
-  background: linear-gradient(
-    to bottom,
-    #ec4899,
-    #8b5cf6
-  );
+  border:
+    2px solid #020617;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #991b1b,
+      #e11d48
+    );
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  opacity: 0.8;
+  background:
+    linear-gradient(
+      to bottom,
+      #b91c1c,
+      #f43f5e
+    );
 }
 
 /* Firefox */
+
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ec4899 black;
+
+  scrollbar-color:
+    #e11d48
+    #020617;
 }
 
 /* =========================
-   NOISE OVERLAY SUPPORT
+   NOISE OVERLAY
 ========================= */
 
 .noise {
@@ -92,17 +137,19 @@ body {
 }
 
 /* =========================
-   GLOW UTILS
+   GLOW UTILITIES
 ========================= */
 
-.glow-pink {
+.glow-red {
   box-shadow:
-    0 0 40px rgba(236, 72, 153, 0.3);
+    0 0 40px
+    rgba(225, 29, 72, 0.35);
 }
 
-.glow-indigo {
-  box-shadow:
-    0 0 40px rgba(99, 102, 241, 0.3);
+.glow-text {
+  text-shadow:
+    0 0 25px
+    rgba(225, 29, 72, 0.35);
 }
 
 /* =========================
@@ -110,31 +157,39 @@ body {
 ========================= */
 
 .text-gradient {
-  background: linear-gradient(
-    to right,
-    #ec4899,
-    #f9a8d4
-  );
+  background:
+    linear-gradient(
+      to right,
+      #b11226,
+      #e11d48
+    );
 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip:
+    text;
+
+  -webkit-text-fill-color:
+    transparent;
 }
 
 /* =========================
-   BACKDROP BLUR SUPPORT
+   GLASS EFFECT
 ========================= */
 
 .glass {
-  background: rgba(255, 255, 255, 0.04);
+  background:
+    rgba(255, 255, 255, 0.04);
 
-  backdrop-filter: blur(20px);
+  backdrop-filter:
+    blur(20px);
 
-  border: 1px solid rgba(
-    255,
-    255,
-    255,
-    0.08
-  );
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
 }
 
 /* =========================
@@ -148,11 +203,12 @@ body {
 
   border-radius: 999px;
 
-  background: linear-gradient(
-    to right,
-    #ec4899,
-    #f472b6
-  );
+  background:
+    linear-gradient(
+      to right,
+      #991b1b,
+      #e11d48
+    );
 
   padding:
     1rem
@@ -174,13 +230,15 @@ body {
 }
 
 .btn-premium:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
   box-shadow:
-    0 10px 40px rgba(
-      236,
+    0 10px 40px
+    rgba(
+      225,
+      29,
       72,
-      153,
       0.4
     );
 }
@@ -192,15 +250,18 @@ body {
 @keyframes float {
 
   0% {
-    transform: translateY(0px);
+    transform:
+      translateY(0px);
   }
 
   50% {
-    transform: translateY(-10px);
+    transform:
+      translateY(-10px);
   }
 
   100% {
-    transform: translateY(0px);
+    transform:
+      translateY(0px);
   }
 
 }

@@ -33,7 +33,7 @@ export default function EventCard({
           transition-all
           duration-700
           hover:-translate-y-2
-          hover:border-pink-500/30
+          hover:border-rose-600/30
           hover:shadow-[0_0_80px_rgba(236,72,153,0.15)]
         "
       >
@@ -57,7 +57,7 @@ export default function EventCard({
               h-60
               w-60
               rounded-full
-              bg-pink-500/20
+              bg-rose-600/20
               blur-3xl
             "
           />
@@ -161,7 +161,7 @@ export default function EventCard({
                 font-semibold
                 uppercase
                 tracking-[0.25em]
-                text-pink-400
+                text-rose-500
               "
             >
               {event.date}

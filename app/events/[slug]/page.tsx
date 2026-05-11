@@ -84,7 +84,7 @@ export default async function EventPage({
             h-[500px]
             w-[500px]
             rounded-full
-            bg-pink-500/20
+            bg-rose-600/20
             blur-3xl
           "
         />
@@ -106,7 +106,7 @@ export default async function EventPage({
               font-semibold
               uppercase
               tracking-[0.35em]
-              text-pink-400
+              text-rose-500
             "
           >
             Live Experience
@@ -244,7 +244,7 @@ export default async function EventPage({
                   font-semibold
                   uppercase
                   tracking-[0.35em]
-                  text-pink-400
+                  text-rose-500
                 "
               >
                 About The Event
@@ -298,7 +298,7 @@ export default async function EventPage({
                   absolute
                   inset-0
                   bg-gradient-to-br
-                  from-pink-500/10
+                  from-[#b11226]/10
                   to-indigo-500/10
                 "
               />
@@ -311,7 +311,7 @@ export default async function EventPage({
                     font-semibold
                     uppercase
                     tracking-[0.35em]
-                    text-pink-400
+                    text-rose-500
                   "
                 >
                   Reserve Access
@@ -349,8 +349,8 @@ export default async function EventPage({
                     w-full
                     rounded-full
                     bg-gradient-to-r
-                    from-pink-500
-                    to-pink-400
+                    from-[#b11226]
+                    to-[#e11d48]
                     px-8
                     py-5
                     text-sm
@@ -359,11 +359,11 @@ export default async function EventPage({
                     tracking-[0.25em]
                     text-white
                     shadow-2xl
-                    shadow-pink-500/30
+                    shadow-rose-600/30
                     transition-all
                     duration-300
                     hover:scale-[1.02]
-                    hover:shadow-pink-500/50
+                    hover:shadow-rose-600/50
                   "
                 >
                   Reserve Ticket

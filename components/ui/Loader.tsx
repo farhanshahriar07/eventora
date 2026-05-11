@@ -49,7 +49,7 @@ export default function Loader({
               h-[400px]
               w-[400px]
               rounded-full
-              bg-pink-500/20
+              bg-rose-600/20
               blur-3xl
             "
           />
@@ -122,7 +122,7 @@ export default function Loader({
                   -translate-x-1/2
                   -translate-y-1/2
                   rounded-full
-                  bg-pink-500/20
+                  bg-rose-600/20
                   blur-3xl
                 "
               />
@@ -186,7 +186,7 @@ export default function Loader({
                   w-1/2
                   bg-gradient-to-r
                   from-transparent
-                  via-pink-500
+                  via-rose-600
                   to-transparent
                 "
               />

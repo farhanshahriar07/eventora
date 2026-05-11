@@ -77,7 +77,7 @@ export default function Hero() {
           h-[500px]
           w-[500px]
           rounded-full
-          bg-pink-500/20
+          bg-rose-600/20
           blur-3xl
         "
         style={{
@@ -175,8 +175,8 @@ export default function Hero() {
                   mt-3
                   block
                   bg-gradient-to-r
-                  from-pink-500
-                  to-pink-300
+                  from-[#b11226]
+                  to-[#e11d48]
                   bg-clip-text
                   text-transparent
                 "
@@ -245,10 +245,10 @@ export default function Hero() {
                     transition-all
                     duration-300
                     hover:scale-[1.03]
-                    hover:border-pink-500/30
+                    hover:border-rose-600/30
                     hover:bg-white/[0.06]
                     hover:shadow-2xl
-                    hover:shadow-pink-500/10
+                    hover:shadow-rose-600/10
                     active:scale-[0.98]
                   "
                 >
@@ -274,7 +274,7 @@ export default function Hero() {
                         -translate-x-1/2
                         -translate-y-1/2
                         rounded-full
-                        bg-pink-500/10
+                        bg-rose-600/10
                         blur-2xl
                       "
                     />

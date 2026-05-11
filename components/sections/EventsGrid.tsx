@@ -36,7 +36,7 @@ export default function EventsGrid() {
           h-[500px]
           w-[500px]
           rounded-full
-          bg-pink-500/10
+          bg-rose-600/10
           blur-3xl
         "
       />
@@ -91,7 +91,7 @@ export default function EventsGrid() {
                 font-semibold
                 uppercase
                 tracking-[0.35em]
-                text-pink-400
+                text-rose-500
               "
             >
               Featured Experiences
@@ -117,8 +117,8 @@ export default function EventsGrid() {
                   mt-3
                   block
                   bg-gradient-to-r
-                  from-pink-500
-                  to-pink-300
+                  from-[#b11226]
+                  to-[#e11d48]
                   bg-clip-text
                   text-transparent
                 "

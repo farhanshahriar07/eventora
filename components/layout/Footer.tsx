@@ -55,7 +55,7 @@ export default function Footer() {
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
-          bg-pink-500/10
+          bg-rose-600/10
           blur-3xl
         "
       />
@@ -140,7 +140,7 @@ export default function Footer() {
                   text-gray-400
                   transition-all
                   duration-300
-                  hover:text-pink-400
+                  hover:text-rose-500
                 "
               >
                 {link.name}
@@ -177,11 +177,11 @@ export default function Footer() {
                 backdrop-blur-xl
                 transition-all
                 duration-300
-                hover:border-pink-500/30
-                hover:bg-pink-500/10
-                hover:text-pink-400
+                hover:border-rose-600/30
+                hover:bg-rose-600/10
+                hover:text-rose-500
                 hover:shadow-2xl
-                hover:shadow-pink-500/20
+                hover:shadow-rose-600/20
               "
             >
 
@@ -214,11 +214,11 @@ export default function Footer() {
                 backdrop-blur-xl
                 transition-all
                 duration-300
-                hover:border-pink-500/30
-                hover:bg-pink-500/10
-                hover:text-pink-400
+                hover:border-rose-600/30
+                hover:bg-rose-600/10
+                hover:text-rose-500
                 hover:shadow-2xl
-                hover:shadow-pink-500/20
+                hover:shadow-rose-600/20
               "
             >
 
@@ -251,11 +251,11 @@ export default function Footer() {
                 backdrop-blur-xl
                 transition-all
                 duration-300
-                hover:border-pink-500/30
-                hover:bg-pink-500/10
-                hover:text-pink-400
+                hover:border-rose-600/30
+                hover:bg-rose-600/10
+                hover:text-rose-500
                 hover:shadow-2xl
-                hover:shadow-pink-500/20
+                hover:shadow-rose-600/20
               "
             >
 

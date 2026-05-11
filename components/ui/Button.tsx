@@ -17,8 +17,8 @@ export default function Button({
         overflow-hidden
         rounded-full
         bg-gradient-to-r
-        from-pink-500
-        to-pink-400
+        from-[#b11226]
+        to-[#e11d48]
         px-8
         py-4
         text-sm
@@ -27,11 +27,11 @@ export default function Button({
         tracking-[0.2em]
         text-white
         shadow-2xl
-        shadow-pink-500/30
+        shadow-rose-600/30
         transition-all
         duration-300
         hover:scale-[1.03]
-        hover:shadow-pink-500/50
+        hover:shadow-rose-600/50
         active:scale-[0.98]
 
         ${className}

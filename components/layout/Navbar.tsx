@@ -205,7 +205,7 @@ export default function Navbar() {
                               shadow-lg
                             `
                             : `
-                              text-pink-400
+                              text-rose-500
                             `
                           : `
                               text-gray-300
@@ -342,7 +342,7 @@ export default function Navbar() {
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
-            bg-pink-500/20
+            bg-rose-600/20
             blur-3xl
           "
         />
@@ -382,11 +382,11 @@ export default function Navbar() {
                   ${
                     active
                       ? `
-                        text-pink-400
+                        text-rose-500
                       `
                       : `
                         text-white
-                        hover:text-pink-300
+                        hover:text-rose-300
                       `
                   }
                 `}

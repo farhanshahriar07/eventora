@@ -41,7 +41,7 @@ export default function ContactPage() {
             h-[500px]
             w-[500px]
             rounded-full
-            bg-pink-500/20
+            bg-rose-600/20
             blur-3xl
           "
         />
@@ -101,7 +101,7 @@ export default function ContactPage() {
                   font-semibold
                   uppercase
                   tracking-[0.35em]
-                  text-pink-400
+                  text-rose-500
                 "
               >
                 Contact EELEVEN
@@ -127,8 +127,8 @@ export default function ContactPage() {
                     mt-3
                     block
                     bg-gradient-to-r
-                    from-pink-500
-                    to-pink-300
+                    from-[#b11226]
+                    to-[#e11d48]
                     bg-clip-text
                     text-transparent
                   "
@@ -232,7 +232,7 @@ export default function ContactPage() {
                     font-semibold
                     uppercase
                     tracking-[0.35em]
-                    text-pink-400
+                    text-rose-500
                   "
                 >
                   Contact Information
@@ -371,7 +371,7 @@ export default function ContactPage() {
                         outline-none
                         transition
                         placeholder:text-gray-500
-                        focus:border-pink-500/50
+                        focus:border-rose-600/50
                       "
                     />
 
@@ -408,7 +408,7 @@ export default function ContactPage() {
                         outline-none
                         transition
                         placeholder:text-gray-500
-                        focus:border-pink-500/50
+                        focus:border-rose-600/50
                       "
                     />
 
@@ -445,7 +445,7 @@ export default function ContactPage() {
                         outline-none
                         transition
                         placeholder:text-gray-500
-                        focus:border-pink-500/50
+                        focus:border-rose-600/50
                       "
                     />
 
@@ -457,8 +457,8 @@ export default function ContactPage() {
                       mt-4
                       rounded-full
                       bg-gradient-to-r
-                      from-pink-500
-                      to-pink-400
+                      from-[#b11226]
+                      to-[#e11d48]
                       px-8
                       py-5
                       text-sm
@@ -467,11 +467,11 @@ export default function ContactPage() {
                       tracking-[0.25em]
                       text-white
                       shadow-2xl
-                      shadow-pink-500/30
+                      shadow-rose-600/30
                       transition-all
                       duration-300
                       hover:scale-[1.02]
-                      hover:shadow-pink-500/50
+                      hover:shadow-rose-600/50
                     "
                   >
                     Send Message
