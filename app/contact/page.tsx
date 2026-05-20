@@ -261,7 +261,7 @@ export default function ContactPage() {
                         text-white
                       "
                     >
-                      hello@eeleven.com
+                      info@eeleven.org
                     </p>
 
                   </div>

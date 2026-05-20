@@ -162,7 +162,7 @@ export default function Footer() {
 
             {/* Facebook */}
             <a
-              href="#"
+              href="https://www.facebook.com/people/Eeleven-E11/61589327934660/"
               className="
                 flex
                 h-16
@@ -183,6 +183,7 @@ export default function Footer() {
                 hover:shadow-2xl
                 hover:shadow-rose-600/20
               "
+              target="_blank"
             >
 
               <svg
@@ -199,7 +200,7 @@ export default function Footer() {
 
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/e11.eeleven/"
               className="
                 flex
                 h-16
@@ -220,6 +221,7 @@ export default function Footer() {
                 hover:shadow-2xl
                 hover:shadow-rose-600/20
               "
+              target="_blank"
             >
 
               <svg
@@ -236,7 +238,7 @@ export default function Footer() {
 
             {/* Mail */}
             <a
-              href="#"
+              href="mailto:info@eeleven.org"
               className="
                 flex
                 h-16
