@@ -287,7 +287,7 @@ export default function ContactPage() {
                         text-white
                       "
                     >
-                      +8801711744427
+                      <a href="tel:+8801711744427">01711-744427</a>
                     </p>
 
                   </div>
