@@ -287,7 +287,7 @@ export default function ContactPage() {
                         text-white
                       "
                     >
-                      +880 1234 567890
+                      +8801711744427
                     </p>
 
                   </div>
@@ -313,7 +313,7 @@ export default function ContactPage() {
                         text-white
                       "
                     >
-                      Dhaka, Bangladesh
+                      House No. 34, Road No. 2,  Banani, Dhaka
                     </p>
 
                   </div>
