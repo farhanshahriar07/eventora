@@ -120,7 +120,7 @@ export default function ContactPage() {
                   md:text-8xl
                 "
               >
-                LET’S CREATE
+                LET'S BUILD
 
                 <span
                   className="
@@ -133,7 +133,7 @@ export default function ContactPage() {
                     text-transparent
                   "
                 >
-                  SOMETHING ICONIC
+                  THE FUTURE
                 </span>
 
               </h1>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                   text-gray-400
                 "
               >
-                Whether you’re planning a concert, nightlife experience, festival, or immersive activation — we’d love to hear from you.
+                Whether you're interested in partnerships, sponsorships, automotive exhibitions, motorsport events, or brand activations — we'd love to connect with you.
               </p>
 
             </div>
@@ -431,7 +431,7 @@ export default function ContactPage() {
 
                     <textarea
                       rows={6}
-                      placeholder="Tell us about your project or event..."
+                      placeholder="Tell us about your automotive project, sponsorship opportunity, or partnership inquiry..."
                       className="
                         mt-3
                         w-full

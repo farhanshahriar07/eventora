@@ -11,7 +11,9 @@ export default function EventsGrid() {
         relative
         overflow-hidden
         bg-black
-        py-32
+        py-16
+        sm:py-24
+        md:py-32
       "
     >
 
@@ -78,7 +80,9 @@ export default function EventsGrid() {
           <div
             className="
               mx-auto
-              mb-24
+              mb-16
+              sm:mb-20
+              md:mb-24
               max-w-4xl
               text-center
             "
@@ -87,34 +91,44 @@ export default function EventsGrid() {
             {/* Label */}
             <p
               className="
-                text-sm
+                text-xs
+                sm:text-sm
                 font-semibold
                 uppercase
-                tracking-[0.35em]
+                tracking-[0.3em]
+                sm:tracking-[0.35em]
                 text-rose-500
+                px-4
+                sm:px-0
               "
             >
-              Featured Experiences
+              Featured Motorsport Experiences
             </p>
 
             {/* Heading */}
             <h2
               className="
-                mt-6
-                text-5xl
+                mt-4
+                sm:mt-6
+                text-4xl
+                sm:text-5xl
+                md:text-6xl
+                lg:text-7xl
                 font-black
                 uppercase
                 leading-[0.9]
                 tracking-tight
                 text-white
-                md:text-7xl
+                px-4
+                sm:px-0
               "
             >
-              IMMERSIVE
+              AUTOMOTIVE
 
               <span
                 className="
-                  mt-3
+                  mt-2
+                  sm:mt-3
                   block
                   bg-gradient-to-r
                   from-[#b11226]
@@ -132,15 +146,21 @@ export default function EventsGrid() {
             <p
               className="
                 mx-auto
-                mt-10
+                mt-6
+                sm:mt-8
+                md:mt-10
                 max-w-3xl
-                text-lg
+                text-base
+                sm:text-lg
+                md:text-xl
+                lg:text-2xl
                 leading-relaxed
                 text-gray-400
-                md:text-2xl
+                px-4
+                sm:px-0
               "
             >
-              Step into unforgettable nights of music, culture, lights, and immersive entertainment experiences.
+              Experience the thrill of motorsport through premium car exhibitions, professional drift competitions, and world-class automotive festivals.
             </p>
 
           </div>
@@ -151,7 +171,10 @@ export default function EventsGrid() {
         <div
           className="
             grid
-            gap-10
+            gap-6
+            sm:gap-8
+            md:gap-10
+            grid-cols-1
             md:grid-cols-2
             xl:grid-cols-3
           "

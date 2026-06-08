@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 type EventCardProps = {
   event: {
@@ -15,13 +19,15 @@ export default function EventCard({
   event,
 }: EventCardProps) {
 
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <Link
       href={`/events/${event.slug}`}
       className="group block"
     >
 
-      <div
+      <motion.div
         className="
           relative
           overflow-hidden
@@ -32,24 +38,34 @@ export default function EventCard({
           backdrop-blur-xl
           transition-all
           duration-700
-          hover:-translate-y-2
-          hover:border-rose-600/30
-          hover:shadow-[0_0_80px_rgba(236,72,153,0.15)]
         "
+        whileHover={{ y: -8 }}
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+        style={{
+          boxShadow: isHovered
+            ? "0 0 80px rgba(236, 72, 153, 0.15)"
+            : "none",
+          borderColor: isHovered
+            ? "rgba(225, 29, 72, 0.3)"
+            : "rgba(255, 255, 255, 0.1)",
+        }}
       >
 
         {/* Glow */}
-        <div
+        <motion.div
           className="
             absolute
             inset-0
             opacity-0
-            transition-opacity
-            duration-700
-            group-hover:opacity-100
+            pointer-events-none
           "
+          animate={{
+            opacity: isHovered ? 1 : 0,
+          }}
+          transition={{ duration: 0.7 }}
         >
-          <div
+          <motion.div
             className="
               absolute
               -left-20
@@ -60,9 +76,17 @@ export default function EventCard({
               bg-rose-600/20
               blur-3xl
             "
+            animate={{
+              scale: isHovered ? [1, 1.2, 1] : 1,
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           />
 
-          <div
+          <motion.div
             className="
               absolute
               bottom-0
@@ -73,12 +97,22 @@ export default function EventCard({
               bg-indigo-500/20
               blur-3xl
             "
+            animate={{
+              scale: isHovered ? [1, 1.15, 1] : 1,
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
           />
-        </div>
+        </motion.div>
 
-        {/* Image */}
-        <div className="relative h-[420px] overflow-hidden">
+        {/* Image Container */}
+        <div className="relative h-[300px] sm:h-[360px] md:h-[420px] overflow-hidden">
 
+          {/* Image with zoom effect */}
           <Image
             src={event.image}
             alt={event.title}
@@ -92,8 +126,11 @@ export default function EventCard({
               object-cover
               transition-transform
               duration-1000
-              group-hover:scale-110
+              ease-out
             "
+            style={{
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
+            }}
           />
 
           {/* Dark Overlay */}
@@ -105,6 +142,7 @@ export default function EventCard({
               from-black
               via-black/30
               to-transparent
+              pointer-events-none
             "
           />
 
@@ -116,11 +154,12 @@ export default function EventCard({
               bg-gradient-to-b
               from-black/30
               to-transparent
+              pointer-events-none
             "
           />
 
           {/* Floating Badge */}
-          <div
+          <motion.div
             className="
               absolute
               left-5
@@ -137,10 +176,12 @@ export default function EventCard({
               tracking-[0.2em]
               text-white
               backdrop-blur-xl
+              z-10
             "
+            whileHover={{ scale: 1.05 }}
           >
             {event.location}
-          </div>
+          </motion.div>
 
           {/* Content */}
           <div
@@ -150,65 +191,88 @@ export default function EventCard({
               left-0
               z-10
               w-full
-              p-8
+              p-4
+              sm:p-6
+              md:p-8
             "
           >
 
             {/* Date */}
-            <p
+            <motion.p
               className="
-                text-sm
+                text-xs
+                sm:text-sm
                 font-semibold
                 uppercase
-                tracking-[0.25em]
+                tracking-[0.2em]
+                sm:tracking-[0.25em]
                 text-rose-500
               "
+              animate={{
+                x: isHovered ? 4 : 0,
+              }}
+              transition={{ duration: 0.3 }}
             >
               {event.date}
-            </p>
+            </motion.p>
 
             {/* Title */}
-            <h3
+            <motion.h3
               className="
-                mt-4
-                text-4xl
+                mt-3
+                md:mt-4
+                text-2xl
+                sm:text-3xl
+                md:text-4xl
                 font-black
                 uppercase
                 leading-none
                 tracking-tight
                 text-white
               "
+              animate={{
+                x: isHovered ? 4 : 0,
+              }}
+              transition={{ duration: 0.3, delay: 0.05 }}
             >
               {event.title}
-            </h3>
+            </motion.h3>
 
             {/* CTA */}
-            <div
+            <motion.div
               className="
-                mt-8
+                mt-4
+                sm:mt-6
+                md:mt-8
                 inline-flex
                 items-center
                 gap-3
-                text-sm
+                text-xs
+                sm:text-sm
                 font-semibold
                 uppercase
-                tracking-[0.2em]
+                tracking-[0.15em]
+                sm:tracking-[0.2em]
                 text-white/80
                 transition-all
                 duration-300
-                group-hover:gap-5
                 group-hover:text-white
               "
+              animate={{
+                gap: isHovered ? "1.25rem" : "0.75rem",
+                x: isHovered ? 4 : 0,
+              }}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
               Explore Event →
 
-            </div>
+            </motion.div>
 
           </div>
 
         </div>
 
-      </div>
+      </motion.div>
 
     </Link>
   );

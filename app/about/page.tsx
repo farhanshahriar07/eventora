@@ -120,7 +120,7 @@ export default function AboutPage() {
                   md:text-8xl
                 "
               >
-                WE BUILD
+                TRANSFORMING
 
                 <span
                   className="
@@ -133,7 +133,7 @@ export default function AboutPage() {
                     text-transparent
                   "
                 >
-                  EXPERIENCES
+                  AUTOMOTIVE CULTURE
                 </span>
 
               </h1>
@@ -149,7 +149,7 @@ export default function AboutPage() {
                   text-gray-400
                 "
               >
-                EELEVEN is a next-generation cultural platform focused on immersive entertainment, unforgettable concerts, nightlife, and premium experiences for modern audiences.
+                EELEVEN is a pioneering automotive event management and motorsport experience company dedicated to transforming Bangladesh's automotive and entertainment landscape through premium exhibitions, racing festivals, and world-class experiences.
               </p>
 
             </div>
@@ -160,7 +160,7 @@ export default function AboutPage() {
 
       </section>
 
-      {/* Story Section */}
+      {/* Vision & Mission Section */}
       <section
         className="
           relative
@@ -212,8 +212,54 @@ export default function AboutPage() {
             "
           >
 
-            {/* Left */}
+            {/* Vision */}
             <FadeUp>
+
+              <div>
+
+                <p
+                  className="
+                    text-sm
+                    font-semibold
+                    uppercase
+                    tracking-[0.35em]
+                    text-rose-500
+                  "
+                >
+                  Our Vision
+                </p>
+
+                <h2
+                  className="
+                    mt-6
+                    text-5xl
+                    font-black
+                    uppercase
+                    leading-[0.9]
+                    tracking-tight
+                    text-white
+                  "
+                >
+                  LEADING THE FUTURE
+                </h2>
+
+                <p
+                  className="
+                    mt-10
+                    text-xl
+                    leading-relaxed
+                    text-gray-400
+                  "
+                >
+                  To become Bangladesh's leading automotive event and motorsport experience company by creating internationally recognized events that connect entertainment, innovation, and automotive culture across South Asia.
+                </p>
+
+              </div>
+
+            </FadeUp>
+
+            {/* Mission */}
+            <FadeUp delay={0.2}>
 
               <div>
 
@@ -240,41 +286,222 @@ export default function AboutPage() {
                     text-white
                   "
                 >
-                  CREATING CULTURAL MOMENTS
+                  TRANSFORMING AUTOMOTIVE CULTURE
                 </h2>
 
+                <div className="mt-10 space-y-6">
+
+                  <p
+                    className="
+                      text-xl
+                      leading-relaxed
+                      text-gray-400
+                    "
+                  >
+                    Our mission is to transform Bangladesh's automotive landscape through world-class experiences that inspire, connect, and elevate communities.
+                  </p>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Introduce global motorsport culture into Bangladesh",
+                      "Promote innovation and youth engagement",
+                      "Build platforms for automotive brands and enthusiasts",
+                      "Position Bangladesh as a regional hub for motorsport entertainment",
+                    ].map((item, index) => (
+                      <li
+                        key={index}
+                        className="
+                          flex
+                          items-start
+                          gap-3
+                          text-lg
+                          text-gray-400
+                        "
+                      >
+                        <span className="mt-1.5 text-rose-500">▸</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
+
               </div>
 
             </FadeUp>
 
-            {/* Right */}
-            <FadeUp delay={0.2}>
+          </div>
 
-              <div className="space-y-8">
+        </div>
 
-                <p
+      </section>
+
+      {/* Core Values Section */}
+      <section
+        className="
+          relative
+          overflow-hidden
+          py-32
+        "
+      >
+
+        {/* Background */}
+        <div
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-b
+            from-[#050816]
+            to-black
+          "
+        />
+
+        {/* Glow Left */}
+        <div
+          className="
+            absolute
+            left-0
+            top-0
+            h-[500px]
+            w-[500px]
+            rounded-full
+            bg-rose-600/10
+            blur-3xl
+          "
+        />
+
+        {/* Content */}
+        <div
+          className="
+            container
+            relative
+            z-10
+          "
+        >
+
+          <FadeUp>
+
+            <div className="mx-auto max-w-4xl text-center">
+
+              <p
+                className="
+                  text-sm
+                  font-semibold
+                  uppercase
+                  tracking-[0.35em]
+                  text-rose-500
+                "
+              >
+                What Drives Us
+              </p>
+
+              <h2
+                className="
+                  mt-6
+                  text-5xl
+                  font-black
+                  uppercase
+                  leading-[0.9]
+                  tracking-tight
+                  text-white
+                  md:text-7xl
+                "
+              >
+                CORE VALUES
+              </h2>
+
+            </div>
+
+          </FadeUp>
+
+          <div
+            className="
+              mt-20
+              grid
+              gap-8
+              md:grid-cols-2
+              lg:grid-cols-3
+            "
+          >
+
+            {[
+              {
+                title: "Innovation",
+                description: "Developing modern event concepts through technology, immersive experiences, and creative engagement.",
+              },
+              {
+                title: "Motorsport Culture",
+                description: "Building awareness and appreciation for racing, performance engineering, and automotive excellence.",
+              },
+              {
+                title: "Experience Design",
+                description: "Creating memorable experiences that leave lasting impressions on audiences, partners, and brands.",
+              },
+              {
+                title: "Community Building",
+                description: "Connecting enthusiasts, creators, businesses, influencers, racers, and fans into one unified ecosystem.",
+              },
+              {
+                title: "Excellence",
+                description: "Maintaining international standards in event execution, safety, hospitality, and audience engagement.",
+              },
+              {
+                title: "Youth Engagement",
+                description: "Inspiring the next generation through automotive passion, education, and career opportunities.",
+              },
+            ].map((value, index) => (
+
+              <FadeUp
+                key={value.title}
+                delay={index * 0.1}
+              >
+
+                <div
                   className="
-                    text-xl
-                    leading-relaxed
-                    text-gray-400
+                    group
+                    rounded-[32px]
+                    border
+                    border-white/10
+                    bg-white/[0.03]
+                    p-8
+                    backdrop-blur-xl
+                    transition-all
+                    duration-500
+                    hover:border-rose-600/30
+                    hover:bg-white/[0.06]
                   "
                 >
-                  We believe events should be more than entertainment. They should become memories, movements, and emotional experiences that connect people together.
-                </p>
 
-                <p
-                  className="
-                    text-xl
-                    leading-relaxed
-                    text-gray-400
-                  "
-                >
-                  From immersive nightlife to large-scale concerts and cultural festivals, EELEVEN is designed to redefine how modern audiences experience live entertainment.
-                </p>
+                  <h3
+                    className="
+                      text-2xl
+                      font-black
+                      uppercase
+                      tracking-tight
+                      text-white
+                      transition-colors
+                      duration-300
+                      group-hover:text-rose-500
+                    "
+                  >
+                    {value.title}
+                  </h3>
 
-              </div>
+                  <p
+                    className="
+                      mt-4
+                      leading-relaxed
+                      text-gray-400
+                    "
+                  >
+                    {value.description}
+                  </p>
 
-            </FadeUp>
+                </div>
+
+              </FadeUp>
+
+            ))}
 
           </div>
 
@@ -287,7 +514,7 @@ export default function AboutPage() {
         className="
           relative
           overflow-hidden
-          pb-32
+          py-32
         "
       >
 
@@ -310,16 +537,16 @@ export default function AboutPage() {
 
             {[
               {
-                number: "120+",
-                label: "Events Produced",
+                number: "50+",
+                label: "Automotive Events",
               },
               {
-                number: "50K+",
-                label: "Audience Reached",
+                number: "100K+",
+                label: "Enthusiasts Engaged",
               },
               {
-                number: "12",
-                label: "Cities Activated",
+                number: "200+",
+                label: "Vehicles Showcased",
               },
             ].map((item, index) => (
 
@@ -362,6 +589,400 @@ export default function AboutPage() {
                     "
                   >
                     {item.label}
+                  </p>
+
+                </div>
+
+              </FadeUp>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Services Section */}
+      <section
+        className="
+          relative
+          overflow-hidden
+          py-32
+        "
+      >
+
+        {/* Background */}
+        <div
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-b
+            from-black
+            via-[#050816]
+            to-black
+          "
+        />
+
+        {/* Glow Right */}
+        <div
+          className="
+            absolute
+            bottom-0
+            right-0
+            h-[500px]
+            w-[500px]
+            rounded-full
+            bg-indigo-500/10
+            blur-3xl
+          "
+        />
+
+        {/* Content */}
+        <div
+          className="
+            container
+            relative
+            z-10
+          "
+        >
+
+          <FadeUp>
+
+            <div className="mx-auto max-w-4xl text-center">
+
+              <p
+                className="
+                  text-sm
+                  font-semibold
+                  uppercase
+                  tracking-[0.35em]
+                  text-rose-500
+                "
+              >
+                What We Offer
+              </p>
+
+              <h2
+                className="
+                  mt-6
+                  text-5xl
+                  font-black
+                  uppercase
+                  leading-[0.9]
+                  tracking-tight
+                  text-white
+                  md:text-7xl
+                "
+              >
+                OUR SERVICES
+              </h2>
+
+              <p
+                className="
+                  mx-auto
+                  mt-10
+                  max-w-3xl
+                  text-xl
+                  leading-relaxed
+                  text-gray-400
+                "
+              >
+                Comprehensive automotive event solutions that connect brands, enthusiasts, and communities through unforgettable experiences.
+              </p>
+
+            </div>
+
+          </FadeUp>
+
+          <div
+            className="
+              mt-20
+              grid
+              gap-8
+              md:grid-cols-2
+              lg:grid-cols-3
+            "
+          >
+
+            {[
+              {
+                icon: "🏎️",
+                title: "Automotive Exhibitions",
+                description: "Premium showcases featuring supercars, luxury vehicles, classic cars, modified vehicles, and electric vehicles with exclusive access and brand opportunities.",
+              },
+              {
+                icon: "🏁",
+                title: "Motorsport Events",
+                description: "Professional drift competitions, racing festivals, Formula racing experiences, and track day events that bring the thrill of speed to life.",
+              },
+              {
+                icon: "🚗",
+                title: "Vehicle Launches",
+                description: "Product launches, new vehicle unveilings, dealership showcases, and brand activations that create direct engagement with consumers.",
+              },
+              {
+                icon: "🎵",
+                title: "Entertainment Experiences",
+                description: "Live concerts, DJ festivals, celebrity performances, and youth lifestyle events that create unique festival atmospheres.",
+              },
+              {
+                icon: "💼",
+                title: "Brand Activations",
+                description: "Interactive sponsor booths, experiential marketing zones, influencer campaigns, and digital engagement initiatives.",
+              },
+              {
+                icon: "🤝",
+                title: "Corporate & VIP",
+                description: "Executive networking sessions, industry summits, investor showcases, media events, and premium hospitality experiences.",
+              },
+            ].map((service, index) => (
+
+              <FadeUp
+                key={service.title}
+                delay={index * 0.1}
+              >
+
+                <div
+                  className="
+                    group
+                    rounded-[32px]
+                    border
+                    border-white/10
+                    bg-white/[0.03]
+                    p-8
+                    backdrop-blur-xl
+                    transition-all
+                    duration-500
+                    hover:border-rose-600/30
+                    hover:bg-white/[0.06]
+                    hover:shadow-[0_0_80px_rgba(236,72,153,0.15)]
+                  "
+                >
+
+                  {/* Icon */}
+                  <div
+                    className="
+                      text-5xl
+                      transition-transform
+                      duration-300
+                      group-hover:scale-110
+                    "
+                  >
+                    {service.icon}
+                  </div>
+
+                  <h3
+                    className="
+                      mt-6
+                      text-2xl
+                      font-black
+                      uppercase
+                      tracking-tight
+                      text-white
+                      transition-colors
+                      duration-300
+                      group-hover:text-rose-500
+                    "
+                  >
+                    {service.title}
+                  </h3>
+
+                  <p
+                    className="
+                      mt-4
+                      leading-relaxed
+                      text-gray-400
+                    "
+                  >
+                    {service.description}
+                  </p>
+
+                </div>
+
+              </FadeUp>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Flagship Event Section */}
+      <section
+        className="
+          relative
+          overflow-hidden
+          py-32
+        "
+      >
+
+        {/* Background */}
+        <div
+          className="
+            absolute
+            inset-0
+            bg-gradient-to-b
+            from-[#050816]
+            to-black
+          "
+        />
+
+        {/* Glow Left */}
+        <div
+          className="
+            absolute
+            left-0
+            top-1/2
+            h-[500px]
+            w-[500px]
+            -translate-y-1/2
+            rounded-full
+            bg-rose-600/10
+            blur-3xl
+          "
+        />
+
+        {/* Content */}
+        <div
+          className="
+            container
+            relative
+            z-10
+          "
+        >
+
+          <FadeUp>
+
+            <div className="mx-auto max-w-5xl text-center">
+
+              <p
+                className="
+                  text-sm
+                  font-semibold
+                  uppercase
+                  tracking-[0.35em]
+                  text-rose-500
+                "
+              >
+                Flagship Event
+              </p>
+
+              <h2
+                className="
+                  mt-6
+                  text-5xl
+                  font-black
+                  uppercase
+                  leading-[0.9]
+                  tracking-tight
+                  text-white
+                  md:text-7xl
+                "
+              >
+                EELEVEN
+
+                <span
+                  className="
+                    mt-3
+                    block
+                    bg-gradient-to-r
+                    from-[#b11226]
+                    to-[#e11d48]
+                    bg-clip-text
+                    text-transparent
+                  "
+                >
+                  MOTOR FEST
+                </span>
+
+              </h2>
+
+              <p
+                className="
+                  mx-auto
+                  mt-10
+                  max-w-4xl
+                  text-xl
+                  leading-relaxed
+                  text-gray-400
+                "
+              >
+                Bangladesh's largest automotive and entertainment festival, combining international car exhibitions, professional drift competitions, live concerts, and VIP experiences under one platform.
+              </p>
+
+            </div>
+
+          </FadeUp>
+
+          <div
+            className="
+              mt-16
+              grid
+              gap-6
+              md:grid-cols-2
+              lg:grid-cols-4
+            "
+          >
+
+            {[
+              {
+                title: "Car Exhibition",
+                description: "Supercars, luxury vehicles, classic collections, and concept cars",
+              },
+              {
+                title: "Drift Arena",
+                description: "Professional drift performances and motorsport demonstrations",
+              },
+              {
+                title: "Live Entertainment",
+                description: "Concerts, DJ festivals, gaming, and influencer appearances",
+              },
+              {
+                title: "VIP Zones",
+                description: "Premium lounges, networking areas, and sponsor activations",
+              },
+            ].map((feature, index) => (
+
+              <FadeUp
+                key={feature.title}
+                delay={index * 0.1}
+              >
+
+                <div
+                  className="
+                    rounded-[24px]
+                    border
+                    border-white/10
+                    bg-white/[0.03]
+                    p-6
+                    backdrop-blur-xl
+                  "
+                >
+
+                  <h4
+                    className="
+                      text-lg
+                      font-black
+                      uppercase
+                      tracking-tight
+                      text-white
+                    "
+                  >
+                    {feature.title}
+                  </h4>
+
+                  <p
+                    className="
+                      mt-3
+                      text-sm
+                      leading-relaxed
+                      text-gray-400
+                    "
+                  >
+                    {feature.description}
                   </p>
 
                 </div>

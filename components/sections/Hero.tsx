@@ -10,6 +10,8 @@ import {
 import Button from "../ui/Button";
 import FadeUp from "../ui/FadeUp";
 import HeroEffects from "./HeroEffects";
+import AnimatedText from "../ui/AnimatedText";
+import { motion } from "framer-motion";
 
 export default function Hero() {
 
@@ -68,7 +70,7 @@ export default function Hero() {
       />
 
       {/* Glow Left */}
-      <div
+      <motion.div
         className="
           absolute
           left-0
@@ -80,13 +82,22 @@ export default function Hero() {
           bg-rose-600/20
           blur-3xl
         "
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
         style={{
           transform: `translateY(${offset * 0.5}px)`,
         }}
       />
 
       {/* Glow Right */}
-      <div
+      <motion.div
         className="
           absolute
           bottom-0
@@ -98,6 +109,16 @@ export default function Hero() {
           bg-indigo-500/20
           blur-3xl
         "
+        animate={{
+          scale: [1, 1.15, 1],
+          opacity: [0.2, 0.25, 0.2],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
         style={{
           transform: `translateY(${offset * -0.3}px)`,
         }}
@@ -135,44 +156,69 @@ export default function Hero() {
           >
 
             {/* Badge */}
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="
-                mb-8
+                mb-6
+                md:mb-8
                 inline-flex
                 items-center
                 rounded-full
                 border
                 border-white/10
                 bg-white/5
-                px-5
-                py-2
-                text-sm
+                px-4
+                py-1.5
+                md:px-5
+                md:py-2
+                text-xs
+                md:text-sm
                 font-medium
                 text-white/80
                 backdrop-blur-xl
+                text-center
               "
             >
-              ✨ Premium Event Experience Platform
-            </div>
+              🏁 Automotive Event & Motorsport Experience Company
+            </motion.div>
 
             {/* Heading */}
-            <h1
+            <motion.h1
               className="
                 max-w-6xl
-                text-6xl
+                text-4xl
+                sm:text-5xl
+                md:text-6xl
+                lg:text-7xl
+                xl:text-8xl
                 font-black
                 uppercase
                 leading-[0.9]
                 tracking-tight
                 text-white
-                md:text-8xl
+                px-4
+                md:px-0
               "
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.3,
+                ease: [0.16, 1, 0.3, 1],
+              }}
             >
-              WE CREATE
+              TURNING SPEED
 
-              <span
+              <motion.span
                 className="
-                  mt-3
+                  mt-2
+                  md:mt-3
                   block
                   bg-gradient-to-r
                   from-[#b11226]
@@ -180,36 +226,61 @@ export default function Hero() {
                   bg-clip-text
                   text-transparent
                 "
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.6,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
               >
-                EXPERIENCES
-              </span>
+                INTO EXPERIENCES
+              </motion.span>
 
-            </h1>
+            </motion.h1>
 
             {/* Description */}
-            <p
+            <AnimatedText
+              text="Bangladesh's leading automotive event company creating world-class motorsport experiences, premium car exhibitions, drift competitions, and automotive lifestyle festivals."
+              delay={0.8}
               className="
-                mt-10
+                mt-6
+                md:mt-10
                 max-w-3xl
                 text-center
-                text-lg
+                text-base
+                sm:text-lg
+                md:text-xl
+                lg:text-2xl
                 leading-relaxed
                 text-gray-300
-                md:text-2xl
+                px-4
+                md:px-0
               "
-            >
-              Youth-driven cultural platform creating impactful experiences through concerts, festivals, and immersive entertainment.
-            </p>
+            />
 
             {/* Buttons */}
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 1.2,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className="
-                mt-14
+                mt-10
+                md:mt-14
                 flex
+                flex-col
+                sm:flex-row
                 flex-wrap
                 items-center
                 justify-center
-                gap-5
+                gap-4
+                md:gap-5
+                px-4
+                md:px-0
               "
             >
 
@@ -225,7 +296,9 @@ export default function Hero() {
               {/* About */}
               <Link href="/about">
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="
                     group
                     relative
@@ -244,12 +317,10 @@ export default function Hero() {
                     backdrop-blur-xl
                     transition-all
                     duration-300
-                    hover:scale-[1.03]
                     hover:border-rose-600/30
                     hover:bg-white/[0.06]
                     hover:shadow-2xl
                     hover:shadow-rose-600/10
-                    active:scale-[0.98]
                   "
                 >
 
@@ -301,11 +372,11 @@ export default function Hero() {
                     About Us
                   </span>
 
-                </button>
+                </motion.button>
 
               </Link>
 
-            </div>
+            </motion.div>
 
           </div>
 

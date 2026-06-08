@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const links = [
   {
-    name: "Experiences",
+    name: "Home",
     href: "/",
   },
   {
@@ -297,7 +297,7 @@ export default function Footer() {
                 text-gray-600
               "
             >
-              Developed with immersive cinematic experiences in mind.
+              Turning Speed Into Experiences — Automotive & Motorsport Excellence
             </p>
 
           </div>

@@ -1,16 +1,30 @@
-import { ButtonHTMLAttributes } from "react";
+"use client";
 
-type ButtonProps =
-  ButtonHTMLAttributes<HTMLButtonElement>;
+import { motion } from "framer-motion";
+
+type ButtonProps = {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+};
 
 export default function Button({
   children,
   className = "",
-  ...props
+  onClick,
+  type = "button",
+  disabled = false,
 }: ButtonProps) {
 
   return (
-    <button
+    <motion.button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      whileHover={{ scale: disabled ? 1 : 1.05 }}
+      whileTap={{ scale: disabled ? 1 : 0.95 }}
       className={`
         group
         relative
@@ -19,9 +33,12 @@ export default function Button({
         bg-gradient-to-r
         from-[#b11226]
         to-[#e11d48]
-        px-8
-        py-4
-        text-sm
+        px-6
+        py-3
+        md:px-8
+        md:py-4
+        text-xs
+        md:text-sm
         font-bold
         uppercase
         tracking-[0.2em]
@@ -30,17 +47,41 @@ export default function Button({
         shadow-rose-600/30
         transition-all
         duration-300
-        hover:scale-[1.03]
         hover:shadow-rose-600/50
-        active:scale-[0.98]
+        disabled:opacity-50
+        disabled:cursor-not-allowed
+        w-full
+        sm:w-auto
 
         ${className}
       `}
-      {...props}
     >
 
+      {/* Animated Glow */}
+      <motion.span
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-rose-400/20
+          to-red-500/20
+          opacity-0
+          group-hover:opacity-100
+        "
+        initial={{ scale: 0, opacity: 0 }}
+        whileHover={{
+          scale: [1, 1.5, 1],
+          opacity: [0, 0.5, 0],
+          transition: {
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        }}
+      />
+
       {/* Shine Effect */}
-      <span
+      <motion.span
         className="
           absolute
           inset-0
@@ -49,10 +90,16 @@ export default function Button({
           from-transparent
           via-white/20
           to-transparent
-          transition-transform
-          duration-1000
-          group-hover:translate-x-[120%]
         "
+        animate={{
+          translateX: ["120%", "-120%"],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "linear",
+          repeatDelay: 2,
+        }}
       />
 
       {/* Text */}
@@ -60,6 +107,6 @@ export default function Button({
         {children}
       </span>
 
-    </button>
+    </motion.button>
   );
 }

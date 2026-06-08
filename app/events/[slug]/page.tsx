@@ -109,7 +109,7 @@ export default async function EventPage({
               text-rose-500
             "
           >
-            Live Experience
+            Automotive Experience
           </p>
 
           {/* Title */}
@@ -261,7 +261,7 @@ export default async function EventPage({
                   text-white
                 "
               >
-                EXPERIENCE THE NIGHT
+                FEEL THE ADRENALINE
               </h2>
 
               <p
@@ -314,7 +314,7 @@ export default async function EventPage({
                     text-rose-500
                   "
                 >
-                  Reserve Access
+                  Ticket Booking
                 </p>
 
                 <h3
@@ -328,7 +328,7 @@ export default async function EventPage({
                     text-white
                   "
                 >
-                  BOOK YOUR EXPERIENCE
+                  JOIN THE EVENT
                 </h3>
 
                 <p
@@ -339,7 +339,7 @@ export default async function EventPage({
                     text-gray-400
                   "
                 >
-                  Secure your place and become part of an unforgettable immersive event experience.
+                  Secure your access and become part of Bangladesh's premier automotive and motorsport experience.
                 </p>
 
                 {/* Button */}
@@ -366,7 +366,7 @@ export default async function EventPage({
                     hover:shadow-rose-600/50
                   "
                 >
-                  Reserve Ticket
+                  Get Tickets
                 </button>
 
               </div>

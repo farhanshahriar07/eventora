@@ -1,37 +1,37 @@
 export const events = [
   {
-    slug: "aid-concert",
-    title: "Aid Concert",
-    date: "June 12, 2026",
+    slug: "eeleven-motor-fest",
+    title: "EELEVEN Motor Fest",
+    date: "July 25, 2026",
     location: "Dhaka, Bangladesh",
     image:
-      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop",
 
     description:
-      "Experience an unforgettable night of live music featuring top artists, immersive visuals, and an energetic crowd.",
+      "Bangladesh's largest automotive and entertainment festival featuring international car exhibitions, professional drift competitions, live concerts, and VIP experiences. Witness supercars, luxury vehicles, and motorsport action under one roof.",
   },
 
   {
-    slug: "falgun-flow",
-    title: "Falgun Flow",
-    date: "February 21, 2026",
+    slug: "drift-championship",
+    title: "Drift Championship",
+    date: "November 15, 2026",
     location: "Chattogram, Bangladesh",
     image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1619405399517-d7fce0f13302?q=80&w=1200&auto=format&fit=crop",
 
     description:
-      "Celebrate culture, colors, and music at Falgun Flow — a vibrant festival experience.",
+      "Professional drift battles showcasing precision driving, tire-smoking action, and motorsport excellence. Experience the thrill of competitive drifting with Bangladesh's top drivers.",
   },
 
   {
-    slug: "arabian-nights",
-    title: "Arabian Nights",
-    date: "August 5, 2026",
+    slug: "supercar-showcase",
+    title: "Supercar Showcase",
+    date: "December 20, 2026",
     location: "Sylhet, Bangladesh",
     image:
-      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop",
 
     description:
-      "A magical evening of performances, lights, music, and luxury experiences.",
+      "An exclusive automotive exhibition featuring rare supercars, luxury vehicles, classic automobiles, and electric vehicles. Connect with brands, enthusiasts, and industry leaders.",
   },
 ];

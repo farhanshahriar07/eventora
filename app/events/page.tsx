@@ -19,7 +19,9 @@ export default function EventsPage() {
         className="
           relative
           overflow-hidden
-          pt-52
+          pt-32
+          sm:pt-40
+          md:pt-52
         "
       >
 
@@ -83,7 +85,9 @@ export default function EventsPage() {
             container
             relative
             z-10
-            py-24
+            py-16
+            sm:py-20
+            md:py-24
           "
         >
 
@@ -100,34 +104,45 @@ export default function EventsPage() {
               {/* Label */}
               <p
                 className="
-                  text-sm
+                  text-xs
+                  sm:text-sm
                   font-semibold
                   uppercase
-                  tracking-[0.35em]
+                  tracking-[0.3em]
+                  sm:tracking-[0.35em]
                   text-rose-500
+                  px-4
+                  sm:px-0
                 "
               >
-                Premium Experiences
+                Motorsport & Automotive Experiences
               </p>
 
               {/* Title */}
               <h1
                 className="
-                  mt-6
-                  text-6xl
+                  mt-4
+                  sm:mt-6
+                  text-4xl
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-7xl
+                  xl:text-8xl
                   font-black
                   uppercase
                   leading-[0.9]
                   tracking-tight
                   text-white
-                  md:text-8xl
+                  px-4
+                  sm:px-0
                 "
               >
-                DISCOVER
+                UPCOMING
 
                 <span
                   className="
-                    mt-3
+                    mt-2
+                    sm:mt-3
                     block
                     bg-gradient-to-r
                     from-[#b11226]
@@ -145,14 +160,20 @@ export default function EventsPage() {
               <p
                 className="
                   mx-auto
-                  mt-10
+                  mt-6
+                  sm:mt-8
+                  md:mt-10
                   max-w-3xl
-                  text-xl
+                  text-base
+                  sm:text-lg
+                  md:text-xl
                   leading-relaxed
                   text-gray-400
+                  px-4
+                  sm:px-0
                 "
               >
-                Explore immersive concerts, festivals, nightlife, and unforgettable cultural experiences curated for the next generation.
+                Experience world-class automotive exhibitions, professional drift competitions, supercar showcases, and motorsport festivals that bring the thrill of speed to life.
               </p>
 
             </div>
@@ -168,7 +189,9 @@ export default function EventsPage() {
         className="
           relative
           overflow-hidden
-          pb-32
+          pb-16
+          sm:pb-24
+          md:pb-32
         "
       >
 
@@ -210,7 +233,10 @@ export default function EventsPage() {
           <div
             className="
               grid
-              gap-10
+              gap-6
+              sm:gap-8
+              md:gap-10
+              grid-cols-1
               md:grid-cols-2
               xl:grid-cols-3
             "
