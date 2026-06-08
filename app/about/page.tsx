@@ -16,7 +16,9 @@ export default function AboutPage() {
         className="
           relative
           overflow-hidden
-          pt-52
+          pt-32
+          sm:pt-40
+          md:pt-52
         "
       >
 
@@ -80,7 +82,9 @@ export default function AboutPage() {
             container
             relative
             z-10
-            py-24
+            py-16
+            sm:py-20
+            md:py-24
           "
         >
 
@@ -97,11 +101,15 @@ export default function AboutPage() {
               {/* Label */}
               <p
                 className="
-                  text-sm
+                  text-xs
+                  sm:text-sm
                   font-semibold
                   uppercase
-                  tracking-[0.35em]
+                  tracking-[0.3em]
+                  sm:tracking-[0.35em]
                   text-rose-500
+                  px-4
+                  sm:px-0
                 "
               >
                 About EELEVEN
@@ -110,21 +118,28 @@ export default function AboutPage() {
               {/* Title */}
               <h1
                 className="
-                  mt-6
-                  text-6xl
+                  mt-4
+                  sm:mt-6
+                  text-4xl
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-7xl
+                  xl:text-8xl
                   font-black
                   uppercase
                   leading-[0.9]
                   tracking-tight
                   text-white
-                  md:text-8xl
+                  px-4
+                  sm:px-0
                 "
               >
                 TRANSFORMING
 
                 <span
                   className="
-                    mt-3
+                    mt-2
+                    sm:mt-3
                     block
                     bg-gradient-to-r
                     from-[#b11226]
@@ -142,11 +157,17 @@ export default function AboutPage() {
               <p
                 className="
                   mx-auto
-                  mt-10
+                  mt-6
+                  sm:mt-8
+                  md:mt-10
                   max-w-3xl
-                  text-xl
+                  text-base
+                  sm:text-lg
+                  md:text-xl
                   leading-relaxed
                   text-gray-400
+                  px-4
+                  sm:px-0
                 "
               >
                 EELEVEN is a pioneering automotive event management and motorsport experience company dedicated to transforming Bangladesh's automotive and entertainment landscape through premium exhibitions, racing festivals, and world-class experiences.
@@ -165,7 +186,9 @@ export default function AboutPage() {
         className="
           relative
           overflow-hidden
-          py-32
+          py-16
+          sm:py-24
+          md:py-32
         "
       >
 
@@ -207,7 +230,9 @@ export default function AboutPage() {
           <div
             className="
               grid
-              gap-20
+              gap-12
+              md:gap-16
+              lg:gap-20
               lg:grid-cols-2
             "
           >
@@ -219,10 +244,12 @@ export default function AboutPage() {
 
                 <p
                   className="
-                    text-sm
+                    text-xs
+                    sm:text-sm
                     font-semibold
                     uppercase
-                    tracking-[0.35em]
+                    tracking-[0.3em]
+                    sm:tracking-[0.35em]
                     text-rose-500
                   "
                 >
@@ -231,8 +258,11 @@ export default function AboutPage() {
 
                 <h2
                   className="
-                    mt-6
-                    text-5xl
+                    mt-4
+                    sm:mt-6
+                    text-3xl
+                    sm:text-4xl
+                    md:text-5xl
                     font-black
                     uppercase
                     leading-[0.9]
@@ -245,8 +275,12 @@ export default function AboutPage() {
 
                 <p
                   className="
-                    mt-10
-                    text-xl
+                    mt-6
+                    sm:mt-8
+                    md:mt-10
+                    text-base
+                    sm:text-lg
+                    md:text-xl
                     leading-relaxed
                     text-gray-400
                   "
@@ -265,10 +299,12 @@ export default function AboutPage() {
 
                 <p
                   className="
-                    text-sm
+                    text-xs
+                    sm:text-sm
                     font-semibold
                     uppercase
-                    tracking-[0.35em]
+                    tracking-[0.3em]
+                    sm:tracking-[0.35em]
                     text-rose-500
                   "
                 >
@@ -277,8 +313,11 @@ export default function AboutPage() {
 
                 <h2
                   className="
-                    mt-6
-                    text-5xl
+                    mt-4
+                    sm:mt-6
+                    text-3xl
+                    sm:text-4xl
+                    md:text-5xl
                     font-black
                     uppercase
                     leading-[0.9]
@@ -289,11 +328,13 @@ export default function AboutPage() {
                   TRANSFORMING AUTOMOTIVE CULTURE
                 </h2>
 
-                <div className="mt-10 space-y-6">
+                <div className="mt-6 sm:mt-8 md:mt-10 space-y-6 sm:space-y-8">
 
                   <p
                     className="
-                      text-xl
+                      text-base
+                      sm:text-lg
+                      md:text-xl
                       leading-relaxed
                       text-gray-400
                     "
@@ -301,7 +342,7 @@ export default function AboutPage() {
                     Our mission is to transform Bangladesh's automotive landscape through world-class experiences that inspire, connect, and elevate communities.
                   </p>
 
-                  <ul className="space-y-4">
+                  <ul className="space-y-3 sm:space-y-4">
                     {[
                       "Introduce global motorsport culture into Bangladesh",
                       "Promote innovation and youth engagement",
@@ -314,7 +355,9 @@ export default function AboutPage() {
                           flex
                           items-start
                           gap-3
-                          text-lg
+                          text-sm
+                          sm:text-base
+                          md:text-lg
                           text-gray-400
                         "
                       >
@@ -341,7 +384,9 @@ export default function AboutPage() {
         className="
           relative
           overflow-hidden
-          py-32
+          py-16
+          sm:py-24
+          md:py-32
         "
       >
 
@@ -385,11 +430,15 @@ export default function AboutPage() {
 
               <p
                 className="
-                  text-sm
+                  text-xs
+                  sm:text-sm
                   font-semibold
                   uppercase
-                  tracking-[0.35em]
+                  tracking-[0.3em]
+                  sm:tracking-[0.35em]
                   text-rose-500
+                  px-4
+                  sm:px-0
                 "
               >
                 What Drives Us
@@ -397,14 +446,19 @@ export default function AboutPage() {
 
               <h2
                 className="
-                  mt-6
-                  text-5xl
+                  mt-4
+                  sm:mt-6
+                  text-4xl
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-7xl
                   font-black
                   uppercase
                   leading-[0.9]
                   tracking-tight
                   text-white
-                  md:text-7xl
+                  px-4
+                  sm:px-0
                 "
               >
                 CORE VALUES
@@ -459,11 +513,13 @@ export default function AboutPage() {
                 <div
                   className="
                     group
-                    rounded-[32px]
+                    rounded-[24px]
+                    sm:rounded-[32px]
                     border
                     border-white/10
                     bg-white/[0.03]
-                    p-8
+                    p-6
+                    sm:p-8
                     backdrop-blur-xl
                     transition-all
                     duration-500
@@ -474,7 +530,8 @@ export default function AboutPage() {
 
                   <h3
                     className="
-                      text-2xl
+                      text-xl
+                      sm:text-2xl
                       font-black
                       uppercase
                       tracking-tight
@@ -489,7 +546,10 @@ export default function AboutPage() {
 
                   <p
                     className="
-                      mt-4
+                      mt-3
+                      sm:mt-4
+                      text-sm
+                      sm:text-base
                       leading-relaxed
                       text-gray-400
                     "
@@ -514,7 +574,9 @@ export default function AboutPage() {
         className="
           relative
           overflow-hidden
-          py-32
+          py-16
+          sm:py-24
+          md:py-32
         "
       >
 
@@ -559,11 +621,15 @@ export default function AboutPage() {
 
               <p
                 className="
-                  text-sm
+                  text-xs
+                  sm:text-sm
                   font-semibold
                   uppercase
-                  tracking-[0.35em]
+                  tracking-[0.3em]
+                  sm:tracking-[0.35em]
                   text-rose-500
+                  px-4
+                  sm:px-0
                 "
               >
                 What We Offer
@@ -571,14 +637,19 @@ export default function AboutPage() {
 
               <h2
                 className="
-                  mt-6
-                  text-5xl
+                  mt-4
+                  sm:mt-6
+                  text-4xl
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-7xl
                   font-black
                   uppercase
                   leading-[0.9]
                   tracking-tight
                   text-white
-                  md:text-7xl
+                  px-4
+                  sm:px-0
                 "
               >
                 OUR SERVICES
@@ -587,11 +658,17 @@ export default function AboutPage() {
               <p
                 className="
                   mx-auto
-                  mt-10
+                  mt-6
+                  sm:mt-8
+                  md:mt-10
                   max-w-3xl
-                  text-xl
+                  text-base
+                  sm:text-lg
+                  md:text-xl
                   leading-relaxed
                   text-gray-400
+                  px-4
+                  sm:px-0
                 "
               >
                 Comprehensive automotive event solutions that connect brands, enthusiasts, and communities through unforgettable experiences.
@@ -652,11 +729,13 @@ export default function AboutPage() {
                 <div
                   className="
                     group
-                    rounded-[32px]
+                    rounded-[24px]
+                    sm:rounded-[32px]
                     border
                     border-white/10
                     bg-white/[0.03]
-                    p-8
+                    p-6
+                    sm:p-8
                     backdrop-blur-xl
                     transition-all
                     duration-500
@@ -669,7 +748,8 @@ export default function AboutPage() {
                   {/* Icon */}
                   <div
                     className="
-                      text-5xl
+                      text-4xl
+                      sm:text-5xl
                       transition-transform
                       duration-300
                       group-hover:scale-110
@@ -680,8 +760,10 @@ export default function AboutPage() {
 
                   <h3
                     className="
-                      mt-6
-                      text-2xl
+                      mt-4
+                      sm:mt-6
+                      text-xl
+                      sm:text-2xl
                       font-black
                       uppercase
                       tracking-tight
@@ -696,7 +778,10 @@ export default function AboutPage() {
 
                   <p
                     className="
-                      mt-4
+                      mt-3
+                      sm:mt-4
+                      text-sm
+                      sm:text-base
                       leading-relaxed
                       text-gray-400
                     "
@@ -721,7 +806,9 @@ export default function AboutPage() {
         className="
           relative
           overflow-hidden
-          py-32
+          py-16
+          sm:py-24
+          md:py-32
         "
       >
 
@@ -766,11 +853,15 @@ export default function AboutPage() {
 
               <p
                 className="
-                  text-sm
+                  text-xs
+                  sm:text-sm
                   font-semibold
                   uppercase
-                  tracking-[0.35em]
+                  tracking-[0.3em]
+                  sm:tracking-[0.35em]
                   text-rose-500
+                  px-4
+                  sm:px-0
                 "
               >
                 Flagship Event
@@ -778,21 +869,27 @@ export default function AboutPage() {
 
               <h2
                 className="
-                  mt-6
-                  text-5xl
+                  mt-4
+                  sm:mt-6
+                  text-4xl
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-7xl
                   font-black
                   uppercase
                   leading-[0.9]
                   tracking-tight
                   text-white
-                  md:text-7xl
+                  px-4
+                  sm:px-0
                 "
               >
                 EELEVEN
 
                 <span
                   className="
-                    mt-3
+                    mt-2
+                    sm:mt-3
                     block
                     bg-gradient-to-r
                     from-[#b11226]
@@ -809,11 +906,17 @@ export default function AboutPage() {
               <p
                 className="
                   mx-auto
-                  mt-10
+                  mt-6
+                  sm:mt-8
+                  md:mt-10
                   max-w-4xl
-                  text-xl
+                  text-base
+                  sm:text-lg
+                  md:text-xl
                   leading-relaxed
                   text-gray-400
+                  px-4
+                  sm:px-0
                 "
               >
                 Bangladesh's largest automotive and entertainment festival, combining international car exhibitions, professional drift competitions, live concerts, and VIP experiences under one platform.
@@ -825,10 +928,14 @@ export default function AboutPage() {
 
           <div
             className="
-              mt-16
+              mt-12
+              sm:mt-14
+              md:mt-16
               grid
-              gap-6
-              md:grid-cols-2
+              gap-4
+              sm:gap-6
+              grid-cols-1
+              sm:grid-cols-2
               lg:grid-cols-4
             "
           >
